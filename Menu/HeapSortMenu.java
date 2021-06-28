@@ -1,16 +1,16 @@
-package Testers;
+package Menu;
 
 import java.util.Scanner;
 import DataStructures.*;
 
-public class BubbleSortTester {
-    public BubbleSortTester() {
+public class HeapSortMenu {
+    public HeapSortMenu() {
         Scanner scan = new Scanner(System.in);
-        BubbleSort sort = new BubbleSort();
+        HeapSort sort = new HeapSort();
         int choice = 0;
 
         while (true) {
-            System.out.println("\nBubble Sort Algorithm");
+            System.out.println("\nHEAP SORT ALGORITHM");
             System.out.println("\t1. Add number");
             System.out.println("\t2. Sort");
             System.out.println("\t0. Go back to Main Menu");
@@ -28,7 +28,7 @@ public class BubbleSortTester {
                 int[] sorted = sort.getSorted();
                 System.out.println();
                 sort.display();
-                System.out.print("Bubble Sorted List: ");
+                System.out.print("Heap Sorted List: ");
                 for (int i=0; i<sorted.length; i++) {
                     System.out.print(sorted[i] + " ");
                 }
@@ -38,9 +38,5 @@ public class BubbleSortTester {
                 break;
             }
         }   
-    }
-
-    public static void main (String [] args) {
-        new BubbleSortTester();
     }
 }

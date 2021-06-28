@@ -1,16 +1,16 @@
-package Testers;
+package Menu;
 
 import java.util.Scanner;
 import DataStructures.*;
 
-public class HeapSortTester {
-    public HeapSortTester() {
+public class InsertionSortMenu {
+    public InsertionSortMenu() {
         Scanner scan = new Scanner(System.in);
-        HeapSort sort = new HeapSort();
+        InsertionSort sort = new InsertionSort();
         int choice = 0;
 
         while (true) {
-            System.out.println("\nHeap Sort Algorithm");
+            System.out.println("\nINSERTION SORT ALGORITHM");
             System.out.println("\t1. Add number");
             System.out.println("\t2. Sort");
             System.out.println("\t0. Go back to Main Menu");
@@ -28,7 +28,7 @@ public class HeapSortTester {
                 int[] sorted = sort.getSorted();
                 System.out.println();
                 sort.display();
-                System.out.print("Heap Sorted List: ");
+                System.out.print("Insertion Sorted List: ");
                 for (int i=0; i<sorted.length; i++) {
                     System.out.print(sorted[i] + " ");
                 }
@@ -38,9 +38,5 @@ public class HeapSortTester {
                 break;
             }
         }   
-    }
-
-    public static void main (String [] args) {
-        new HeapSortTester();
     }
 }
